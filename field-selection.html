@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Interview Field</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo">Interview AI</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="field-selection.html">Field Selection</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="field-selection">
+        <h2>Select Your Interview Field</h2>
+        <p>Choose the area you're interested in to tailor your interview experience:</p>
+        <form id="fieldSelectionForm">
+            <label for="interviewField">Interview Field</label>
+            <select id="interviewField" name="interviewField" required>
+                <option value="">Select a field</option>
+                <option value="dataAnalyst">Data Analyst</option>
+                <option value="softwareEngineer">Software Engineer</option>
+                <option value="productManager">Product Manager</option>
+            </select>
+            <button type="submit" class="btn">Proceed to Interview</button>
+        </form>
+    </main>
+
+    <script>
+        document.getElementById('fieldSelectionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const selectedField = document.getElementById('interviewField').value;
+            window.location.href = `interviewPage.html?field=${selectedField}`;
+        });
+    </script>
+</body>
+</html>

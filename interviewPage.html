@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Interview</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script> <!-- Load JavaScript at the end -->
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">Interview AI</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="interview-container">
+        <h1>AI Interview Session</h1>
+        <div id="questionContainer">
+            <h2 id="question">Loading question...</h2>
+            <button id="playQuestion" class="btn" onclick="playQuestion()">Play Question</button>
+            <button id="recordAnswer" class="btn" onclick="startRecording()">Record Answer</button>
+        </div>
+        <div class="timer">
+            <span>Time Left: <span id="timer">30</span> seconds</span>
+        </div>
+        <button id="submitInterview" class="btn" onclick="submitInterview()">Submit</button>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Interview AI. All rights reserved.</p>
+    </footer>
+</body>
+</html>

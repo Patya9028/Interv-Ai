@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview AI - Elevate Your Job Prep</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo">Interview AI</a>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Master Your Next Interview</h1>
+            <p>Experience AI-driven mock interviews that prepare you for any job role.</p>
+            <a href="#" class="btn" onclick="openLoginForm()">Get Started</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Features</h2>
+        <div class="feature-item">
+            <h3>Unbiased Assessments</h3>
+            <p>Our AI ensures fair and consistent interview experiences.</p>
+        </div>
+        <div class="feature-item">
+            <h3>24/7 Availability</h3>
+            <p>Access mock interviews anytime, anywhere.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Immediate Feedback</h3>
+            <p>Receive detailed feedback on your performance instantly.</p>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <form action="#" class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Interview AI. All rights reserved.</p>
+    </footer>
+
+    <!-- Login Form Popup -->
+    <div id="loginFormPopup" class="login-popup">
+        <div class="login-popup-content">
+            <span class="close-btn" onclick="closeLoginForm()">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+            <div class="extra-links">
+                <a href="#" onclick="openForgotPasswordForm()">Forgot Password?</a>
+                <a href="#" onclick="openCreateAccountForm()">Create Account</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create Account Popup -->
+    <div id="createAccountPopup" class="login-popup">
+        <div class="login-popup-content">
+            <span class="close-btn" onclick="closeCreateAccountForm()">&times;</span>
+            <h2>Create Account</h2>
+            <form id="createAccountForm">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+                <label for="newPassword">Password:</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Forgot Password Popup -->
+    <div id="forgotPasswordPopup" class="login-popup">
+        <div class="login-popup-content">
+            <span class="close-btn" onclick="closeForgotPasswordForm()">&times;</span>
+            <h2>Forgot Password</h2>
+            <form id="forgotPasswordForm">
+                <label for="forgotEmail">Email:</label>
+                <input type="email" id="forgotEmail" name="forgotEmail" required>
+                <button type="submit">Send Code</button>
+            </form>
+        </div>
+    </div>
+
+<!-- Job Description Form Popup -->
+<div id="jobDescriptionPopup" class="login-popup">
+    <div class="login-popup-content">
+        <span class="close-btn" onclick="closeJobDescriptionForm()">&times;</span>
+        <h2>Job Description</h2>
+        <form id="jobDescriptionForm" onsubmit="submitJobDescription(event)">
+            <label for="jobDescription">Select a Job Description:</label>
+            <select id="jobDescription" name="jobDescription" required>
+                <option value="">--Select a Job--</option>
+                <option value="custom">Custom Job Description</option>
+                <option value="businessAnalyst">Business Analyst</option>
+                <option value="productManager">Product Manager</option>
+                <option value="softwareEngineer">Software Engineer</option>
+                <option value="marketingSpecialist">Marketing Specialist</option>
+                <option value="customerService">Customer Service Representative</option>
+                <option value="salesRepresentative">Sales Representative</option>
+                <option value="humanResources">Human Resources Specialist</option>
+                <option value="dataAnalyst">Data Analyst</option>
+                <option value="uxUiDesigner">UX/UI Designer</option>
+                <option value="qaEngineer">QA Engineer</option>
+            </select>
+
+            <label for="jobRole">Job Role:</label>
+            <input type="text" id="jobRole" name="jobRole" placeholder="Enter the job role" required>
+
+            <label for="jobDescriptionDetails">Job Description:</label>
+            <textarea id="jobDescriptionDetails" name="jobDescriptionDetails" placeholder="Enter the job description" required></textarea>
+
+            <label for="resumeUpload">Upload Resume:</label>
+            <input type="file" id="resumeUpload" name="resumeUpload" accept=".pdf, .docx, .txt" required>
+
+            <button type="submit">Submit</button> <!-- This button will trigger the form submission -->
+        </form>
+    </div>
+</div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

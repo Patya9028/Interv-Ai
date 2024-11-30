@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Session</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo">Interview AI</a>
+        </nav>
+    </header>
+
+    <main class="interview-ui">
+        <h2>Interview Session</h2>
+        <div id="questionDisplay" class="question-box">Question 1: Describe your most challenging project.</div>
+        <textarea id="response" placeholder="Type your response here..."></textarea>
+        <button id="nextQuestion" class="btn">Next Question</button>
+    </main>
+
+    <script>
+        let questionIndex = 0;
+        const questions = [
+            "Describe your most challenging project.",
+            "What skills do you bring to this position?",
+            "Where do you see yourself in 5 years?"
+        ];
+
+        document.getElementById('nextQuestion').addEventListener('click', function() {
+            questionIndex = (questionIndex + 1) % questions.length;
+            document.getElementById('questionDisplay').textContent = `Question ${questionIndex + 1}: ${questions[questionIndex]}`;
+            document.getElementById('response').value = '';
+        });
+    </script>
+</body>
+</html>
